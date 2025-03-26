@@ -1,6 +1,5 @@
 {
-  "name": "azela-prototype",
-  "version": "0.1.0",
+  "name": "azela-trading",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
