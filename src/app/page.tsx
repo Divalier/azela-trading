@@ -3,8 +3,5 @@
 import Home from "../../components/Home"; // Adjusted the path
 
 export default function Page() {
-  return
-  (<div>hello</div>
-
-  );
+  return <Home />;
 }
