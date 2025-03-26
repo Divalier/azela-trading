@@ -10,7 +10,7 @@
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.10.1",
     "firebase": "^11.5.0",
-    "framer-motion": "^12.4.11",
+    "framer-motion": "^12.6.2",
     "lucide-react": "^0.477.0",
     "next": "^15.2.1",
     "next-auth": "^4.24.11",
