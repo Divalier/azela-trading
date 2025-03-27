@@ -1,9 +1,10 @@
 [build]
   command = "npm install && npm run build"
-  publish = "out" # Change from ".next" to "out" for static exports
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
+  GO_VERSION = "1.19" # ✅ Add this to ensure Netlify installs Go
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
