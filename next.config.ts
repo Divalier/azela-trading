@@ -1,13 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "export", // Use 'export' instead of 'standalone' for static deployment
   env: {
-    SITE_NAME: "Azela Trading",
-  },
-  images: {
-    unoptimized: true, // Required for static export in Next.js
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

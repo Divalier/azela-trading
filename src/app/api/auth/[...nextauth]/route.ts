@@ -1,25 +1,17 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
-import { NextRequest } from "next/server";
+export const dynamic = "force-dynamic"; // Ensures it runs dynamically
 
-// ✅ Define NextAuth configuration correctly
-const authOptions: NextAuthOptions = {
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
+
+export const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
-
-// ✅ Explicitly define GET and POST handlers for Next.js API Routes
-export function GET(req: NextRequest) {
-  return handler(req);
-}
-
-export function POST(req: NextRequest) {
-  return handler(req);
-}
+export { handler as GET, handler as POST };
