@@ -1,6 +1,6 @@
 [build]
   command = "npm install && npm run build"
-  publish = ".next"
+  publish = "out" # Change from ".next" to "out" for static exports
 
 [build.environment]
   NODE_VERSION = "18"
@@ -12,5 +12,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-

@@ -1,10 +1,12 @@
-import { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: "export", // Use 'export' instead of 'standalone' for static deployment
   env: {
     SITE_NAME: "Azela Trading",
+  },
+  images: {
+    unoptimized: true, // Required for static export in Next.js
   },
 };
 
