@@ -1,0 +1,15 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "18"
+  GO_VERSION = "1.19" # ✅ Add this to ensure Netlify installs Go
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
